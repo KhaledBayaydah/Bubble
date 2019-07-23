@@ -1,0 +1,42 @@
+import java.awt.Color;
+public class Bubble
+{
+    // intialize variables to control the location, the speed, size, and color of the bubbles
+    int x;
+    int y;
+    Color c;
+    int w;
+    int Speedx;
+    int Speedy;
+    
+    
+    public Bubble(int x, int y)
+    {
+        // helps locate the bubble as teh location of the mouse
+        this.x = x;
+        this.y = y;
+        //randomly colors the bubbles when drawn
+        int max = 255, min = 0;
+        int RandomNum = (int) (Math.random() * ((max - min) +1 )) + min;
+        int RandomNum1 = (int) (Math.random() * ((max - min) +1 )) + min;
+        int RandomNum2 = (int) (Math.random() * ((max - min) +1 )) + min;
+        c = new Color(RandomNum, RandomNum1, RandomNum2);
+        //randomly picks a width to the bubble to create a size for it
+        max = 45; 
+        min = 9;
+        w = (int) (Math.random() * ((max - min) +1)) + min;
+        //randomly puts a speed to the moving bubble.
+        max = 24;
+        min = -24;
+        RandomNum = (int) (Math.random() * ((max - min) +1 )) + min;
+        Speedx = RandomNum;
+        RandomNum = (int) (Math.random() * ((max - min) +1 )) + min;
+        Speedy = RandomNum;
+        
+        
+        
+        
+    }
+
+    
+}
